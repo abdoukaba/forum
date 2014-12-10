@@ -1,0 +1,21 @@
+{% extends "AkaForumBundle::layout.html.twig" %}
+{% block title %}
+Modifier un article - {{ parent() }}
+{% endblock %}
+{% block akaforum_body %}
+<h2>Modifier un post</h2>
+{% include "AkaForumBundle:Forum:formulaire.html.twig" %}
+<p>
+Vous éditez un post déjà existant,
+ne le changez pas trop pour éviter
+aux membres de ne pas comprendre
+ce qu'il se passe.
+</p>
+<p>
+<a href="{{ path('akaforum_voir', {'id': sujet.id}) }}"
+class="btn">
+<i class="icon-chevron-left"></i>
+Retour à l'article
+</a>
+</p>
+{% endblock %}

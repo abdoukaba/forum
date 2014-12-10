@@ -1,0 +1,17 @@
+{% extends "AkaForumBundle::layout.html.twig" %}
+{% block title %}
+Veuillez ajouter un sujet - {{ parent() }}
+{% endblock %}
+{% block akaforum_body %}
+<h2>Ajouter un article</h2>
+{% include "AkaForumBundle:Forum:formulaire.html.twig" %}
+<p>
+Merci , pour votre contribution à cette conversation.
+</p>
+<p>
+
+<i class="icon-chevron-left"></i>
+Retour à l'article
+</a>
+</p>
+{% endblock %}

@@ -1,0 +1,29 @@
+
+{% extends "AkaForumBundle::layout.html.twig" %}
+{% block title %}
+Lecture d'un sujet - {{ parent() }}
+{% endblock %}
+{% block akaforum_body %}
+<h2>{{ sujet.titre }}</h2>
+<i>Par {{ sujet.auteur }}, le {{ sujet.date|date('d/m/Y')
+}}</i>
+<div class="well">
+{{ sujet.contenu }}
+</div>
+<p>
+<a href="{{ path('akaforum_accueil') }}" class="btn">
+<i class="icon-chevron-left"></i>
+Retour à la liste
+</a>
+<a href="{{ path('akaforum_modifier', {'id': sujet.id}) }}"
+class="btn">
+<i class="icon-edit"></i>
+Modifier l'article
+</a>
+<a href="{{ path('akaforum_supprimer', {'id': sujet.id}) }}"
+class="btn">
+<i class="icon-trash"></i>
+Supprimer l'article
+</a>
+</p>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "AkaForumBundle::layout.html.twig" %}
+{% block title %}
+Accueil - {{ parent() }}
+{% endblock %}
+{% block akaforum_body %}
+<h2>Liste des sujets</h2>
+<ul>
+{% for sujet in sujets %}
+<li>
+<a href="{{ path('akaforum_voir', {'id': sujet.id}) }}">{{
+sujet.titre }}</a>
+par {{ sujet.auteur }},
+le {{ sujet.date|date('d/m/Y') }}
+</li>
+{% else %}
+<li>Pas (encore !) de sujets</li>
+{% endfor %}
+</ul>
+{% endblock %}
+

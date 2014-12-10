@@ -1,0 +1,8 @@
+
+<h3>Les derniers articles</h3>
+<ul class="nav nav-pills nav-stacked">
+{% for sujet in liste_sujets %}
+<li><a href="{{ path('akaforum_voir', {'id': sujet.id}) }}">{{
+sujet.titre }}</a></li>
+{% endfor %}
+</ul>

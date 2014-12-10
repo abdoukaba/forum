@@ -1,0 +1,18 @@
+{% extends "AkaForumBundle::layout.html.twig" %}
+{% block title %}
+Supprimer un sujet - {{ parent() }}
+{% endblock %}
+{% block akaforum_body %}
+<h2>Supprimer un article</h2>
+{% include "AkaForumBundle:Forum:formulaire.html.twig" %}
+<p>
+Attention , cette action est irreversible
+donc soyer sur.
+</p>
+<p>
+
+<i class="icon-chevron-left"></i>
+Retour à l'article
+</a>
+</p>
+{% endblock %}
